@@ -39,7 +39,7 @@ sample_ips = [
     "4.99.187.150"
 ]
 
-copies = 10000
+copies = 50000
 
 def upgrade():
     rows = [{"uuid": uuid.uuid4().hex, "ip":ip, "timestamp": str(datetime.now())} for ip in sample_ips * copies]
