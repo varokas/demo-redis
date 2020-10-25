@@ -1,0 +1,64 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.75.1">
+    <title>Redis example</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<header>
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a href="#" class="navbar-brand d-flex align-items-center">
+         <strong>Redis Demo</strong>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="py-5 bg-light">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            Request Time : {{ request_time }}<br/>
+            Log Count : {{ row_count }}<br/>
+            Time Lapse: {{ time_lapsed }}
+        </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <table class="table">
+                <thead><tr>
+                    <th>IP</th>
+                    <th>Count</th>
+                    <th>First</th>
+                    <th>Latest</th>
+                </tr></thead>
+                <tbody>
+                    {% for row in rows %}
+                    <tr>
+                        <td>{{ row.ip }}</td>
+                        <td>{{ row.count }}</td>
+                        <td>{{ row.first }}</td>
+                        <td>{{ row.latest }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+  </div>
+
+</main>
+
+  <script src="static/bootstrap.bundle.min.js"></script>
+
+      
+  </body>
+</html>
