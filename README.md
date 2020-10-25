@@ -8,6 +8,8 @@
 ## Install
 ```
 pipenv install
+
+pipenv run alembic upgrade head
 ```
 
 ## Run
