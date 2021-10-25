@@ -4,3 +4,10 @@ services:
     image: "redis:6.0.8"
     ports:
         - "6379:6379"
+  nginx:
+    image: "nginx:stable"
+    ports:
+        - "80:80"
+    volumes:
+        - "./nginx.conf:/etc/nginx/nginx.conf"
+    network_mode: "host"
